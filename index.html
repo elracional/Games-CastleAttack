@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Castle Attack</title>
+	<link rel="stylesheet" href="css/style.css"> <!-- css of game -->
+	<link href='http://fonts.googleapis.com/css?family=Amaranth' rel='stylesheet' type='text/css'> 
+	<link rel="shortcut icon" href="img/icon.jpg" type="image/x-icon">
+</head>
+<body>
+	<div id="content">
+		<div id="game">
+			<div id="title">
+				<div>
+					<h1>Castle Attack!</h1>
+				</div>
+				<div id="scores">
+					
+					<div class="score">
+						<p>Time</p>
+						<p id="time"><span id="minutes">00</span>:<span id="seconds">00</span></p>
+					</div>
+				</div>
+			</div>
+			<div id="castle">
+				<img src="img/castle3.png" >
+			</div>
+			<div id="title">
+				
+				<div id="scores">
+					<div class="score">
+						<p>Health</p>
+						<p id="healC2">0</p>
+					</div>
+					
+				</div>
+			</div>
+			
+			<p id="player_id">Player: 0</p>
+			<p id="combo">Combo From Pawn Selected: 0</p>
+			<div id="content_board">
+				<div id="board">
+					<div class="row">
+						<div id="c07" onclick="CheckClick(0,7)" class="cell white"></div>
+						<div id="c17" onclick="CheckClick(1,7)" class="cell black"></div>
+						<div id="c27" onclick="CheckClick(2,7)" class="cell white"></div>
+						<div id="c37" onclick="CheckClick(3,7)" class="cell black"></div>
+						<div id="c47" onclick="CheckClick(4,7)" class="cell white"></div>
+						<div id="c57" onclick="CheckClick(5,7)" class="cell black"></div>
+						<div id="c67" onclick="CheckClick(6,7)" class="cell white"></div>
+						<div id="c77" onclick="CheckClick(7,7)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c06" onclick="CheckClick(0,6)" class="cell black"></div>
+						<div id="c16" onclick="CheckClick(1,6)" class="cell white"></div>
+						<div id="c26" onclick="CheckClick(2,6)" class="cell black"></div>
+						<div id="c36" onclick="CheckClick(3,6)" class="cell white"></div>
+						<div id="c46" onclick="CheckClick(4,6)" class="cell black"></div>
+						<div id="c56" onclick="CheckClick(5,6)" class="cell white"></div>
+						<div id="c66" onclick="CheckClick(6,6)" class="cell black"></div>
+						<div id="c76" onclick="CheckClick(7,6)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c05" onclick="CheckClick(0,5)" class="cell white"></div>
+						<div id="c15" onclick="CheckClick(1,5)" class="cell black"></div>
+						<div id="c25" onclick="CheckClick(2,5)" class="cell white"></div>
+						<div id="c35" onclick="CheckClick(3,5)" class="cell black"></div>
+						<div id="c45" onclick="CheckClick(4,5)" class="cell white"></div>
+						<div id="c55" onclick="CheckClick(5,5)" class="cell black"></div>
+						<div id="c65" onclick="CheckClick(6,5)" class="cell white"></div>
+						<div id="c75" onclick="CheckClick(7,5)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c04" onclick="CheckClick(0,4)" class="cell black"></div>
+						<div id="c14" onclick="CheckClick(1,4)" class="cell white"></div>
+						<div id="c24" onclick="CheckClick(2,4)" class="cell black"></div>
+						<div id="c34" onclick="CheckClick(3,4)" class="cell white"></div>
+						<div id="c44" onclick="CheckClick(4,4)" class="cell black"></div>
+						<div id="c54" onclick="CheckClick(5,4)" class="cell white"></div>
+						<div id="c64" onclick="CheckClick(6,4)" class="cell black"></div>
+						<div id="c74" onclick="CheckClick(7,4)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c03" onclick="CheckClick(0,3)" class="cell white"></div>
+						<div id="c13" onclick="CheckClick(1,3)" class="cell black"></div>
+						<div id="c23" onclick="CheckClick(2,3)" class="cell white"></div>
+						<div id="c33" onclick="CheckClick(3,3)" class="cell black"></div>
+						<div id="c43" onclick="CheckClick(4,3)" class="cell white"></div>
+						<div id="c53" onclick="CheckClick(5,3)" class="cell black"></div>
+						<div id="c63" onclick="CheckClick(6,3)" class="cell white"></div>
+						<div id="c73" onclick="CheckClick(7,3)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c02" onclick="CheckClick(0,2)" class="cell black"></div>
+						<div id="c12" onclick="CheckClick(1,2)" class="cell white"></div>
+						<div id="c22" onclick="CheckClick(2,2)" class="cell black"></div>
+						<div id="c32" onclick="CheckClick(3,2)" class="cell white"></div>
+						<div id="c42" onclick="CheckClick(4,2)" class="cell black"></div>
+						<div id="c52" onclick="CheckClick(5,2)" class="cell white"></div>
+						<div id="c62" onclick="CheckClick(6,2)" class="cell black"></div>
+						<div id="c72" onclick="CheckClick(7,2)" class="cell white"></div>
+					</div>
+					<div class="row">
+						<div id="c01" onclick="CheckClick(0,1)" class="cell white"></div>
+						<div id="c11" onclick="CheckClick(1,1)" class="cell black"></div>
+						<div id="c21" onclick="CheckClick(2,1)" class="cell white"></div>
+						<div id="c31" onclick="CheckClick(3,1)" class="cell black"></div>
+						<div id="c41" onclick="CheckClick(4,1)" class="cell white"></div>
+						<div id="c51" onclick="CheckClick(5,1)" class="cell black"></div>
+						<div id="c61" onclick="CheckClick(6,1)" class="cell white"></div>
+						<div id="c71" onclick="CheckClick(7,1)" class="cell black"></div>
+					</div>
+					<div class="row">
+						<div id="c00" onclick="CheckClick(0,0)" class="cell black"></div>
+						<div id="c10" onclick="CheckClick(1,0)" class="cell white"></div>
+						<div id="c20" onclick="CheckClick(2,0)" class="cell black"></div>
+						<div id="c30" onclick="CheckClick(3,0)" class="cell white"></div>
+						<div id="c40" onclick="CheckClick(4,0)" class="cell black"></div>
+						<div id="c50" onclick="CheckClick(5,0)" class="cell white"></div>
+						<div id="c60" onclick="CheckClick(6,0)" class="cell black"></div>
+						<div id="c70" onclick="CheckClick(7,0)" class="cell white"></div>
+					</div>
+				</div>
+			</div>
+			<p></p>
+			<p></p>
+
+			<div id="castle">
+				<img src="img/castle3.png">
+			</div>
+
+			<div id="title">
+				
+				<div id="scores">
+					<div class="score">
+						<p>Health</p>
+						<p id="healC1">0</p>
+					</div>
+					
+				</div>
+			</div>
+			<div id="rules">
+				<div class="info">
+					<p class="english">Rules:</p>
+					<p class="english">- Move a pawn one cell in front of him if you do not have a enemy pawn in front of him</p>
+					<p class="english">- If you fail your move you lose your turn</p>
+					<p class="english">- You can attack a enemy pawn if he is in front of you but the enemy only lose a 50% of his health and you be able for another turn and gain a point on your pawn´s combo, if you attack again the same enemy's pawn you lose 50% of health of your pawn</p>
+					<p class="english">- You can kill a enemy pawn when he is on the left or right diagonal and you gain a extra turn and one point on your pawn´s combo</p>
+					<p class="english">- You can attack a castle when your pawn arrives to a reach of the enemy castle, your pawn convert his health on damage and this is multiplicated to the combo that he has and thats the real damage that you do to the enemy's castle</p>
+					<p class="english">- You win if you have more health on your castle when the times over</p>
+					<p class="english">- If the two players have the same health on them castles the match is a draw</p>
+					<p class="english">PS: Do a lot of combos to get a win</p>
+				
+				</div>
+				
+				
+				
+			</div>
+		</div>
+
+
+		<p>- Code Behavior -</p>
+		<p>Board:</p>
+		<input type="button" value="Get a board" onclick="generate_board()">
+		<input type="button" id="clean" value="Clean Board" onclick="cleanB()"/>
+		<div id="print"></div>
+		<p>Latest movement:</p>
+		<p id="latestM">0</p>
+		<p id="latestC">Which Castle?</p>
+	</div>
+
+
+
+	<div id="message">
+		<p id="notification"></p>
+		<p id="final_score"></p>
+		<div class="share">
+		    <p id="button" onclick="hide_message()"></p>
+			<script src="js/match.js"></script>  
+	    </div>	    
+	</div>
+
+</body>
+</html>
